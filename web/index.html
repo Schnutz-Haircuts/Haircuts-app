@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Schnutz' international haircuts</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="globe-view">
+  <div id="globe"></div>
+  <header class="globe-header">
+    <h1>Schnutz' international haircuts</h1>
+    <p id="summary"></p>
+  </header>
+  <div id="tooltip" hidden></div>
+  <button id="list-button" type="button">All countries</button>
+</section>
+
+<section id="list-view" hidden>
+  <nav class="topbar"><a href="#">&larr; Globe</a></nav>
+  <div class="page">
+    <h1>Schnutz' international haircuts</h1>
+    <ol id="country-list"></ol>
+  </div>
+</section>
+
+<section id="country-view" hidden>
+  <nav class="topbar"><a href="#">&larr; Globe</a><a href="#list">All countries</a></nav>
+  <div class="page" id="country-page"></div>
+</section>
+
+<div id="viewer" hidden><img alt=""></div>
+
+<script src="lib/globe.gl.min.js"></script>
+<script src="lib/topojson-client.min.js"></script>
+<script src="data/world.js"></script>
+<script src="data/events.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+name: Build APK
+
+on:
+  push:
+    branches: [main]
+  # "Run workflow" button on GitHub: rebuild after hair-list.csv or photos change.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get hair-list.csv and photos
+        uses: actions/checkout@v4
+        with:
+          repository: Schnutz-Haircuts/Haircuts
+          path: haircuts-src
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build app data
+        run: |
+          pip install pillow
+          python tools/build_data.py haircuts-src
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build APK
+        working-directory: android
+        run: ./gradlew assembleDebug
+
+      - name: Rename APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk Haircuts.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Haircuts-apk
+          path: Haircuts.apk
+
+      - name: Publish as the "latest" release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Haircuts app (latest build)
+          body: Download Haircuts.apk on your Android phone and open it to install.
+          files: Haircuts.apk
+          make_latest: true

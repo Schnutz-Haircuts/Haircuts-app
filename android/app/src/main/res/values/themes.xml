@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.Haircuts" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/space</item>
+        <item name="android:statusBarColor">@color/space</item>
+        <item name="android:navigationBarColor">@color/space</item>
+    </style>
+    <color name="space">#000814</color>
+    <color name="ic_launcher_background">#0D2F52</color>
+</resources>
