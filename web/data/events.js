@@ -11,7 +11,8 @@ window.HAIRCUTS = [
      "ALB2.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ALB2.jpg"
  },
  {
   "name": "Algeria",
@@ -33,7 +34,8 @@ window.HAIRCUTS = [
      "ALG1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ALG1b.jpg"
  },
  {
   "name": "Andorra",
@@ -47,7 +49,8 @@ window.HAIRCUTS = [
      "AND1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "AND1b.jpg"
  },
  {
   "name": "Angola",
@@ -60,7 +63,8 @@ window.HAIRCUTS = [
      "ANG1.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ANG1.jpg"
  },
  {
   "name": "Armenia",
@@ -89,7 +93,8 @@ window.HAIRCUTS = [
      "ARM.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ARM.jpg"
  },
  {
   "name": "Austria",
@@ -139,7 +144,8 @@ window.HAIRCUTS = [
     "text": "1. Country of birth, numerous haircuts over the years",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "AUT2b.jpg"
  },
  {
   "name": "Azerbaijan",
@@ -152,7 +158,8 @@ window.HAIRCUTS = [
      "AZE.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "AZE.jpg"
  },
  {
   "name": "Bahrain",
@@ -166,7 +173,8 @@ window.HAIRCUTS = [
      "BRN1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "BRN1b.jpg"
  },
  {
   "name": "Belarus",
@@ -184,7 +192,8 @@ window.HAIRCUTS = [
     "text": "2. Conference on 'Strengthening of the principles of a democratic State ruled by law in the Republic of Belarus by way of constitutional control' and meetings with the authorities and civil society, Minsk, 26 and 27 June 2003",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "BLR.jpg"
  },
  {
   "name": "Belgium",
@@ -206,7 +215,8 @@ window.HAIRCUTS = [
      "BEL1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "BEL1b.jpg"
  },
  {
   "name": "Benin",
@@ -227,7 +237,8 @@ window.HAIRCUTS = [
      "BEN.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "BEN.jpg"
  },
  {
   "name": "Bolivia",
@@ -249,7 +260,8 @@ window.HAIRCUTS = [
      "BOL1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "BOL1b.jpg"
  },
  {
   "name": "Bosnia and Herzegovina",
@@ -263,7 +275,8 @@ window.HAIRCUTS = [
      "BIH1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "BIH1b.jpg"
  },
  {
   "name": "Botswana",
@@ -277,7 +290,8 @@ window.HAIRCUTS = [
      "BTW2.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "BTW2.jpg"
  },
  {
   "name": "Brazil",
@@ -291,7 +305,8 @@ window.HAIRCUTS = [
      "BRA1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "BRA1b.jpg"
  },
  {
   "name": "Bulgaria",
@@ -327,7 +342,8 @@ window.HAIRCUTS = [
     "text": "1. Conference on Judicial Reform in Bulgaria, Sofia, 9 September 2003",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "BUL2b.jpg"
  },
  {
   "name": "Cameroon",
@@ -340,7 +356,8 @@ window.HAIRCUTS = [
      "CAM.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "CAM.jpg"
  },
  {
   "name": "Canada",
@@ -353,7 +370,8 @@ window.HAIRCUTS = [
      "CAN1.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "CAN1.jpg"
  },
  {
   "name": "Chile",
@@ -366,7 +384,8 @@ window.HAIRCUTS = [
      "CHI.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "CHI.jpg"
  },
  {
   "name": "Costa Rica",
@@ -380,7 +399,8 @@ window.HAIRCUTS = [
      "CRC1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "CRC1b.jpg"
  },
  {
   "name": "Croatia",
@@ -399,7 +419,8 @@ window.HAIRCUTS = [
     "text": "1. Consultative Hearing with the International Advisers of the Constitutional Court of Croatia, Zagreb, 27 May 1999",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "CRO2b.jpg"
  },
  {
   "name": "Cyprus",
@@ -410,7 +431,8 @@ window.HAIRCUTS = [
     "text": "Preparatory Meeting to the XIII Conference of European Constitutional Courts, Nicosia, Hotel Hilton, October 2003",
     "photos": []
    }
-  ]
+  ],
+  "thumb": null
  },
  {
   "name": "Czech Republic",
@@ -432,7 +454,8 @@ window.HAIRCUTS = [
      "CZE1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "CZE1b.jpg"
  },
  {
   "name": "Denmark",
@@ -443,7 +466,8 @@ window.HAIRCUTS = [
     "text": "Copenhagen Airport, 27.2.2000 on the way back from Latvia, Seminar on the Amendments to the Law on the Constitutional Court of Latvia, Riga, 25-26 February 2000",
     "photos": []
    }
-  ]
+  ],
+  "thumb": null
  },
  {
   "name": "Djibouti",
@@ -457,7 +481,8 @@ window.HAIRCUTS = [
      "DJI2.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "DJI2.jpg"
  },
  {
   "name": "Dominican Republic",
@@ -471,7 +496,8 @@ window.HAIRCUTS = [
      "DOM1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "DOM1b.jpg"
  },
  {
   "name": "Ecuador",
@@ -485,7 +511,8 @@ window.HAIRCUTS = [
      "ECU1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ECU1b.jpg"
  },
  {
   "name": "Egypt",
@@ -499,7 +526,8 @@ window.HAIRCUTS = [
      "EGY1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "EGY1b.jpg"
  },
  {
   "name": "Estonia",
@@ -513,7 +541,8 @@ window.HAIRCUTS = [
      "EST1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "EST1b.jpg"
  },
  {
   "name": "Ethiopia",
@@ -527,7 +556,8 @@ window.HAIRCUTS = [
      "ETH1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ETH1b.jpg"
  },
  {
   "name": "Finland",
@@ -541,7 +571,8 @@ window.HAIRCUTS = [
      "FIN1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "FIN1b.jpg"
  },
  {
   "name": "France",
@@ -566,7 +597,8 @@ window.HAIRCUTS = [
      "FRA.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "FRA.jpg"
  },
  {
   "name": "Gabon",
@@ -579,7 +611,8 @@ window.HAIRCUTS = [
      "GAB.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "GAB.jpg"
  },
  {
   "name": "Georgia",
@@ -608,7 +641,8 @@ window.HAIRCUTS = [
      "GEO.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "GEO.jpg"
  },
  {
   "name": "Germany",
@@ -639,7 +673,8 @@ window.HAIRCUTS = [
     "text": "1. Braunschweig, holidays, 1987",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "GER3b.jpg"
  },
  {
   "name": "Greece",
@@ -653,7 +688,8 @@ window.HAIRCUTS = [
      "GRE1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "GRE1b.jpg"
  },
  {
   "name": "Hungary",
@@ -674,7 +710,8 @@ window.HAIRCUTS = [
      "HUN.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "HUN.jpg"
  },
  {
   "name": "Iceland",
@@ -688,7 +725,8 @@ window.HAIRCUTS = [
      "ISL1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ISL1b.jpg"
  },
  {
   "name": "India",
@@ -702,7 +740,8 @@ window.HAIRCUTS = [
      "IND1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "IND1b.jpg"
  },
  {
   "name": "Indonesia",
@@ -729,7 +768,8 @@ window.HAIRCUTS = [
     "text": "1. ASEF Workshop on Comparing Access to Justice in Asian and European Transitional Countries, Bogor, 26-27 June 2005",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "INA2b.jpg"
  },
  {
   "name": "Italy",
@@ -766,7 +806,8 @@ window.HAIRCUTS = [
      "ITA.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ITA.jpg"
  },
  {
   "name": "Japan",
@@ -796,7 +837,8 @@ window.HAIRCUTS = [
      "JPN1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "JPN1b.jpg"
  },
  {
   "name": "Jordan",
@@ -815,7 +857,8 @@ window.HAIRCUTS = [
     "text": "1. Fourth Seminar on 'Constitution Building in Iraq' organised by the German Friedrich Naumann Stiftung and funded by the Ministry of Foreign Affairs of Germany on the topic 'Iraq's Constitutional Settlement: Past, Present and Future', Amman, 7-10 October 2005",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "JOR2b.jpg"
  },
  {
   "name": "Kazakhstan",
@@ -836,7 +879,8 @@ window.HAIRCUTS = [
      "KAZ.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "KAZ.jpg"
  },
  {
   "name": "Korea",
@@ -857,7 +901,8 @@ window.HAIRCUTS = [
      "KOR.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "KOR.jpg"
  },
  {
   "name": "Kosovo",
@@ -879,7 +924,8 @@ window.HAIRCUTS = [
      "KOS1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "KOS1b.jpg"
  },
  {
   "name": "Kyrgyzstan",
@@ -899,7 +945,8 @@ window.HAIRCUTS = [
      "KYR.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "KYR.jpg"
  },
  {
   "name": "Latvia",
@@ -924,7 +971,8 @@ window.HAIRCUTS = [
     "text": "1. Workshop 'on the functioning of the Constitutional Court of the Republic of Latvia', Riga, Latvia, 3-4 July 1997",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "LAT3c.jpg"
  },
  {
   "name": "Lebanon",
@@ -938,7 +986,8 @@ window.HAIRCUTS = [
      "LEB1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "LEB1b.jpg"
  },
  {
   "name": "Lesotho",
@@ -949,7 +998,8 @@ window.HAIRCUTS = [
     "text": "Private trip to Maseru following mission to South Africa, Conference of Southern African Human Rights Commission, Midrand, 19-28 May 1997.",
     "photos": []
    }
-  ]
+  ],
+  "thumb": null
  },
  {
   "name": "Libya",
@@ -963,7 +1013,8 @@ window.HAIRCUTS = [
      "LBA2.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "LBA2.jpg"
  },
  {
   "name": "Lithuania",
@@ -982,7 +1033,8 @@ window.HAIRCUTS = [
     "text": "1. Baltic-Nordic regional conference on the 'Interpretation and Direct Application of the Constitution', Vilnius, 15-16 March 2002",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "LTU2b.jpg"
  },
  {
   "name": "Madagascar",
@@ -995,7 +1047,8 @@ window.HAIRCUTS = [
      "MAD.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "MAD.jpg"
  },
  {
   "name": "Malaysia",
@@ -1006,7 +1059,8 @@ window.HAIRCUTS = [
     "text": "Trip around the globe, Kuala Lumpur, 1984",
     "photos": []
    }
-  ]
+  ],
+  "thumb": null
  },
  {
   "name": "Malta",
@@ -1020,7 +1074,8 @@ window.HAIRCUTS = [
      "MLT1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "MLT1b.jpg"
  },
  {
   "name": "Mexico",
@@ -1033,7 +1088,8 @@ window.HAIRCUTS = [
      "MEX.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "MEX.jpg"
  },
  {
   "name": "Moldova",
@@ -1077,7 +1133,8 @@ window.HAIRCUTS = [
      "MDA1.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "MDA1.jpg"
  },
  {
   "name": "Monaco",
@@ -1091,7 +1148,8 @@ window.HAIRCUTS = [
      "MON1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "MON1b.jpg"
  },
  {
   "name": "Mongolia",
@@ -1112,7 +1170,8 @@ window.HAIRCUTS = [
      "MGL1.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "MGL1.jpg"
  },
  {
   "name": "Montenegro",
@@ -1125,7 +1184,8 @@ window.HAIRCUTS = [
      "MNE.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "MNE.jpg"
  },
  {
   "name": "Morocco",
@@ -1139,7 +1199,8 @@ window.HAIRCUTS = [
      "MAR1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "MAR1b.jpg"
  },
  {
   "name": "Mozambique",
@@ -1152,7 +1213,8 @@ window.HAIRCUTS = [
      "MOZ.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "MOZ.jpg"
  },
  {
   "name": "Namibia",
@@ -1165,7 +1227,8 @@ window.HAIRCUTS = [
      "NAM.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "NAM.jpg"
  },
  {
   "name": "Netherlands",
@@ -1186,7 +1249,8 @@ window.HAIRCUTS = [
      "NED1.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "NED1.jpg"
  },
  {
   "name": "Nicaragua",
@@ -1200,7 +1264,8 @@ window.HAIRCUTS = [
      "NIC1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "NIC1b.jpg"
  },
  {
   "name": "Niger",
@@ -1214,7 +1279,8 @@ window.HAIRCUTS = [
      "NIG1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "NIG1b.jpg"
  },
  {
   "name": "North Macedonia",
@@ -1235,7 +1301,8 @@ window.HAIRCUTS = [
      "MKD.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "MKD.jpg"
  },
  {
   "name": "Palestinian National Authority",
@@ -1248,7 +1315,8 @@ window.HAIRCUTS = [
      "PAL.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "PAL.jpg"
  },
  {
   "name": "Panama",
@@ -1262,7 +1330,8 @@ window.HAIRCUTS = [
      "PAN1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "PAN1b.jpg"
  },
  {
   "name": "Peru",
@@ -1284,7 +1353,8 @@ window.HAIRCUTS = [
      "PER1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "PER1b.jpg"
  },
  {
   "name": "Poland",
@@ -1310,7 +1380,8 @@ window.HAIRCUTS = [
     "text": "1. XIth Conference of European Constitutional Courts, Warsaw, 17.-19 May 1999",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "POL.jpg"
  },
  {
   "name": "Portugal",
@@ -1332,7 +1403,8 @@ window.HAIRCUTS = [
      "POR.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "POR.jpg"
  },
  {
   "name": "Romania",
@@ -1346,7 +1418,8 @@ window.HAIRCUTS = [
      "ROM1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ROM1b.jpg"
  },
  {
   "name": "Senegal",
@@ -1360,7 +1433,8 @@ window.HAIRCUTS = [
      "SEN1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "SEN1b.jpg"
  },
  {
   "name": "Serbia",
@@ -1373,7 +1447,8 @@ window.HAIRCUTS = [
      "SRB.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "SRB.jpg"
  },
  {
   "name": "Seychelles",
@@ -1387,7 +1462,8 @@ window.HAIRCUTS = [
      "SEY1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "SEY1b.jpg"
  },
  {
   "name": "Singapore",
@@ -1401,7 +1477,8 @@ window.HAIRCUTS = [
      "SGP1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "SGP1b.jpg"
  },
  {
   "name": "Slovakia",
@@ -1412,7 +1489,8 @@ window.HAIRCUTS = [
     "text": "Several visits during 6 month work at Austrian Embassy in Bratislava, 1993",
     "photos": []
    }
-  ]
+  ],
+  "thumb": null
  },
  {
   "name": "Slovenia",
@@ -1426,7 +1504,8 @@ window.HAIRCUTS = [
      "SLO1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "SLO1b.jpg"
  },
  {
   "name": "South Africa",
@@ -1450,7 +1529,8 @@ window.HAIRCUTS = [
     "text": "1. Holidays in Cape Town following mission to Dikhololo - Conference on Federalism, 26 October -3 November 1996",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "RSA3b.jpg"
  },
  {
   "name": "Spain",
@@ -1469,7 +1549,8 @@ window.HAIRCUTS = [
     "text": "1. Holidays, Ibiza, April 2000",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "ESP2b.jpg"
  },
  {
   "name": "Switzerland",
@@ -1491,7 +1572,8 @@ window.HAIRCUTS = [
      "SUI1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "SUI1b.jpg"
  },
  {
   "name": "Taiwan",
@@ -1505,7 +1587,8 @@ window.HAIRCUTS = [
      "ROCb.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ROCb.jpg"
  },
  {
   "name": "Tajikistan",
@@ -1519,7 +1602,8 @@ window.HAIRCUTS = [
      "TAJ2.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "TAJ2.jpg"
  },
  {
   "name": "Tanzania",
@@ -1534,7 +1618,8 @@ window.HAIRCUTS = [
      "TAN1c.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "TAN1c.jpg"
  },
  {
   "name": "Tunisia",
@@ -1563,7 +1648,8 @@ window.HAIRCUTS = [
      "TUN.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "TUN.jpg"
  },
  {
   "name": "Turkey",
@@ -1592,7 +1678,8 @@ window.HAIRCUTS = [
      "TUR.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "TUR.jpg"
  },
  {
   "name": "Turkmenistan",
@@ -1605,7 +1692,8 @@ window.HAIRCUTS = [
      "TKM1.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "TKM1.jpg"
  },
  {
   "name": "Ukraine",
@@ -1655,7 +1743,8 @@ window.HAIRCUTS = [
     "text": "1. Seminar on the Execution of the Decisions of the Constitutional Court, Kyiv, 28-29 October 1999",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "UKR2b.jpg"
  },
  {
   "name": "United Arab Emirates",
@@ -1669,7 +1758,8 @@ window.HAIRCUTS = [
      "UAE1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "UAE1b.jpg"
  },
  {
   "name": "United Kingdom",
@@ -1680,7 +1770,8 @@ window.HAIRCUTS = [
     "text": "Meeting of the IACL Interest Group on the Use of Foreign Precedents by Constitutional Judges and meeting of the IACL Executive Bureau, London, 15 November 2008",
     "photos": []
    }
-  ]
+  ],
+  "thumb": null
  },
  {
   "name": "United States of America",
@@ -1699,7 +1790,8 @@ window.HAIRCUTS = [
     "text": "1. Holidays, Coeur d'Alene, etc., July-August 2014",
     "photos": []
    }
-  ]
+  ],
+  "thumb": "USA2b.jpg"
  },
  {
   "name": "Uzbekistan",
@@ -1710,7 +1802,8 @@ window.HAIRCUTS = [
     "text": "International Conference on 'Ensuring the Rule of Law, Solid Protection of Human Rights and Interests - Main goal of Democratization and Liberalization of Judicial - Legal System, Tashkent, 19 November 2012",
     "photos": []
    }
-  ]
+  ],
+  "thumb": null
  },
  {
   "name": "Yemen",
@@ -1723,7 +1816,8 @@ window.HAIRCUTS = [
      "YEM.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "YEM.jpg"
  },
  {
   "name": "Zambia",
@@ -1737,7 +1831,8 @@ window.HAIRCUTS = [
      "ZAM1b.jpg"
     ]
    }
-  ]
+  ],
+  "thumb": "ZAM1b.jpg"
  }
 ];
 window.VISITED = [

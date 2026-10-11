@@ -5,7 +5,8 @@ Reads hair-list.csv (latin-1, ';'-separated: country;dd/mm/yyyy;event;jpg1..jpg6
 groups events by country (newest first) and writes web/data/events.js, together
 with the list of all visited countries from index_footer.html.
 Copies the referenced photos into web/photos, shrinking any that are larger
-than MAX_SIDE pixels so the app stays a reasonable size.
+than MAX_SIDE pixels so the app stays a reasonable size, plus one small photo
+per country into web/thumbs for the globe.
 
 Usage: python3 tools/build_data.py path/to/Haircuts
 """
@@ -18,6 +19,7 @@ import sys
 from pathlib import Path
 
 MAX_SIDE = 1600
+THUMB_SIDE = 320
 JPEG_QUALITY = 85
 
 # CSV country name -> country name in the world map (Natural Earth, 1:50m).
@@ -69,6 +71,10 @@ def main(src: Path, out: Path) -> None:
 
     for c in countries.values():
         c["events"].sort(key=lambda e: e["date"], reverse=True)
+        # Shown when hovering over the country on the globe: the last photo of
+        # the oldest haircut that has photos.
+        with_photos = [e for e in c["events"] if e["photos"]]
+        c["thumb"] = with_photos[-1]["photos"][-1] if with_photos else None
     data = sorted(countries.values(), key=lambda c: c["name"])
 
     # Every country with a haircut was visited, even if the footer list misses it.
@@ -97,6 +103,12 @@ def main(src: Path, out: Path) -> None:
                 else:
                     missing.append(p)
 
+    thumbs_dir = out / "thumbs"
+    thumbs_dir.mkdir(exist_ok=True)
+    for c in data:
+        if c["thumb"] and (src / c["thumb"]).exists():
+            copy_photo(src / c["thumb"], thumbs_dir / c["thumb"], THUMB_SIDE)
+
     n_events = sum(len(c["events"]) for c in data)
     n_photos = sum(len(e["photos"]) for c in data for e in c["events"])
     print(f"{len(data)} countries, {n_events} events, {n_photos} photos, "
@@ -119,18 +131,18 @@ def read_visited(path: Path) -> list:
     return [{"name": n, "map": VISITED_MAP_NAMES.get(n, n)} for n in names]
 
 
-def copy_photo(src: Path, dst: Path) -> None:
+def copy_photo(src: Path, dst: Path, max_side: int = MAX_SIDE) -> None:
     try:
         from PIL import Image, ImageOps
     except ImportError:
         shutil.copyfile(src, dst)
         return
     with Image.open(src) as im:
-        if max(im.size) <= MAX_SIDE:
+        if max(im.size) <= max_side:
             shutil.copyfile(src, dst)
             return
         im = ImageOps.exif_transpose(im)
-        im.thumbnail((MAX_SIDE, MAX_SIDE))
+        im.thumbnail((max_side, max_side))
         im.convert("RGB").save(dst, "JPEG", quality=JPEG_QUALITY)
 
 

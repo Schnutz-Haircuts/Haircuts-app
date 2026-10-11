@@ -120,17 +120,44 @@
   }
 
   // Name of the country under the cursor, shown next to it.
+  // Haircut countries also show the last photo of their oldest haircut.
+  var tooltipImg = document.createElement('img');
+  var tooltipText = document.createElement('div');
+  tooltip.appendChild(tooltipImg);
+  tooltip.appendChild(tooltipText);
+  var mouse = { x: 0, y: 0 };
+
   function showTooltip(f) {
     if (!f) { tooltip.hidden = true; return; }
     var c = f.haircuts;
-    tooltip.textContent = c
+    tooltipText.textContent = c
       ? c.name + ' (' + c.events.length + (c.events.length === 1 ? ' haircut)' : ' haircuts)')
       : f.label + (f.visited ? ' (visited)' : '');
+    if (c && c.thumb) {
+      tooltipImg.src = 'thumbs/' + c.thumb;
+      tooltipImg.hidden = false;
+    } else {
+      tooltipImg.removeAttribute('src');
+      tooltipImg.hidden = true;
+    }
     tooltip.hidden = false;
+    placeTooltip();
   }
+
+  // Next to the cursor, flipped to the other side near the window's edges.
+  function placeTooltip() {
+    var w = tooltip.offsetWidth, h = tooltip.offsetHeight;
+    var x = mouse.x + 14, y = mouse.y + 14;
+    if (x + w > window.innerWidth - 4) x = mouse.x - 14 - w;
+    if (y + h > window.innerHeight - 4) y = mouse.y - 14 - h;
+    tooltip.style.left = Math.max(4, x) + 'px';
+    tooltip.style.top = Math.max(4, y) + 'px';
+  }
+  tooltipImg.addEventListener('load', placeTooltip);
   globeEl.addEventListener('mousemove', function (e) {
-    tooltip.style.left = (e.clientX + 14) + 'px';
-    tooltip.style.top = (e.clientY + 14) + 'px';
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+    if (!tooltip.hidden) placeTooltip();
   });
   globeEl.addEventListener('mouseleave', function () { showTooltip(null); });
 
