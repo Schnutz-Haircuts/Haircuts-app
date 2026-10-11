@@ -18,11 +18,23 @@
 
   var features = topojson.feature(window.WORLD, window.WORLD.objects.countries).features;
   var visitedMap = {};
-  window.VISITED.forEach(function (v) { visitedMap[v.map] = true; });
+  window.VISITED.forEach(function (v) { visitedMap[v.map] = v.name; });
   features.forEach(function (f) {
     f.haircuts = byMapName[f.properties.name] || null;
     f.visited = !!visitedMap[f.properties.name];
+    f.label = f.haircuts ? f.haircuts.name : visitedMap[f.properties.name] || unabbreviate(f.properties.name);
   });
+
+  // The map data shortens some names ("Dem. Rep. Congo", "Solomon Is.").
+  function unabbreviate(name) {
+    var words = {
+      'Is.': 'Islands', 'I.': 'Island', 'Rep.': 'Republic', 'Dem.': 'Democratic',
+      'Eq.': 'Equatorial', 'Fr.': 'French', 'Br.': 'British', 'Ter.': 'Territory',
+      'St.': 'Saint', 'S.': 'South', 'N.': 'North', 'W.': 'Western', 'Geo.': 'Georgia',
+      'Herz.': 'Herzegovina', 'Barb.': 'Barbuda', 'Vin.': 'Vincent', 'Gren.': 'the Grenadines'
+    };
+    return name.split(' ').map(function (w) { return words[w] || w; }).join(' ');
+  }
 
   // Same colours as the countries-visited map.
   var HAIRCUT = '#e08a0b';
@@ -53,7 +65,7 @@
     .onPolygonHover(function (f) {
       hovered = f && f.haircuts ? f : null;
       globe.polygonCapColor(globe.polygonCapColor()).polygonAltitude(globe.polygonAltitude());
-      showTooltip(hovered && hovered.haircuts);
+      showTooltip(f);
     })
     .onPolygonClick(function (f) {
       if (f.haircuts) openCountry(f.haircuts);
@@ -101,12 +113,20 @@
     return best.b;
   }
 
-  function showTooltip(c) {
-    if (!c) { tooltip.hidden = true; return; }
-    tooltip.textContent = c.name + ' (' + c.events.length +
-      (c.events.length === 1 ? ' haircut)' : ' haircuts)');
+  // Name of the country under the cursor, shown next to it.
+  function showTooltip(f) {
+    if (!f) { tooltip.hidden = true; return; }
+    var c = f.haircuts;
+    tooltip.textContent = c
+      ? c.name + ' (' + c.events.length + (c.events.length === 1 ? ' haircut)' : ' haircuts)')
+      : f.label + (f.visited ? ' (visited)' : '');
     tooltip.hidden = false;
   }
+  globeEl.addEventListener('mousemove', function (e) {
+    tooltip.style.left = (e.clientX + 14) + 'px';
+    tooltip.style.top = (e.clientY + 14) + 'px';
+  });
+  globeEl.addEventListener('mouseleave', function () { showTooltip(null); });
 
   function resize() {
     globe.width(window.innerWidth).height(window.innerHeight);

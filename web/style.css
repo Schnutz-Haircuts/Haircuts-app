@@ -32,10 +32,8 @@ html, body {
 .globe-header .legend { margin-top: 4px; font-size: 13px; }
 
 #tooltip {
-  position: absolute;
-  left: 50%;
-  bottom: calc(164px + env(safe-area-inset-bottom));
-  transform: translateX(-50%);
+  position: fixed;
+  z-index: 2;
   padding: 6px 12px;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.92);
