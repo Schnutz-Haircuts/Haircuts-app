@@ -11,8 +11,10 @@
   });
 
   var nEvents = countries.reduce(function (n, c) { return n + c.events.length; }, 0);
-  document.getElementById('summary').textContent =
-    nEvents + ' haircuts in ' + countries.length + ' countries. Tap a country.';
+  document.getElementById('globe-title').textContent =
+    "Schnutz' " + nEvents + ' international haircuts';
+  document.getElementById('n-haircut').textContent = 'in ' + countries.length + ' countries';
+  document.getElementById('n-visited').textContent = window.VISITED.length + ' countries visited';
 
   // Globe
 
@@ -47,6 +49,10 @@
   var tooltip = document.getElementById('tooltip');
 
   var globe = Globe({ animateIn: false })(globeEl)
+    .onGlobeReady(function () {
+      // Give the countries a moment to draw before removing the message.
+      setTimeout(function () { document.getElementById('loading').hidden = true; }, 600);
+    })
     .backgroundColor('#000814')
     .showAtmosphere(true)
     .atmosphereColor('#7fb4ff')
