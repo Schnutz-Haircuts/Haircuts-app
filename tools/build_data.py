@@ -72,9 +72,9 @@ def main(src: Path, out: Path) -> None:
     for c in countries.values():
         c["events"].sort(key=lambda e: e["date"], reverse=True)
         # Shown when hovering over the country on the globe: the last photo of
-        # the oldest haircut that has photos.
-        with_photos = [e for e in c["events"] if e["photos"]]
-        c["thumb"] = with_photos[-1]["photos"][-1] if with_photos else None
+        # the oldest haircut (none if that haircut has no photos).
+        oldest = c["events"][-1]
+        c["thumb"] = oldest["photos"][-1] if oldest["photos"] else None
     data = sorted(countries.values(), key=lambda c: c["name"])
 
     # Every country with a haircut was visited, even if the footer list misses it.
