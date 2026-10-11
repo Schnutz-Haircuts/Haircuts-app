@@ -17,10 +17,17 @@
   // Globe
 
   var features = topojson.feature(window.WORLD, window.WORLD.objects.countries).features;
-  features.forEach(function (f) { f.haircuts = byMapName[f.properties.name] || null; });
+  var visitedMap = {};
+  window.VISITED.forEach(function (v) { visitedMap[v.map] = true; });
+  features.forEach(function (f) {
+    f.haircuts = byMapName[f.properties.name] || null;
+    f.visited = !!visitedMap[f.properties.name];
+  });
 
-  var HAIRCUT = '#f4a62a';
-  var HAIRCUT_HOVER = '#ffd27a';
+  // Same colours as the countries-visited map.
+  var HAIRCUT = '#e08a0b';
+  var HAIRCUT_HOVER = '#ffb340';
+  var VISITED = '#f6cf8a';
   var OTHER = '#55636f';
   var hovered = null;
 
@@ -33,7 +40,7 @@
     .atmosphereColor('#7fb4ff')
     .polygonsData(features)
     .polygonCapColor(function (f) {
-      if (!f.haircuts) return OTHER;
+      if (!f.haircuts) return f.visited ? VISITED : OTHER;
       return f === hovered ? HAIRCUT_HOVER : HAIRCUT;
     })
     .polygonSideColor(function () { return 'rgba(0, 0, 0, 0.25)'; })
@@ -58,9 +65,9 @@
     .labelText(function (d) { return d.name; })
     .labelSize(0.7)
     .labelDotRadius(0.45)
-    .labelColor(function () { return HAIRCUT_HOVER; })
+    .labelColor(function (d) { return d.country ? HAIRCUT_HOVER : VISITED; })
     .labelResolution(2)
-    .onLabelClick(function (d) { openCountry(d.country); })
+    .onLabelClick(function (d) { if (d.country) openCountry(d.country); })
     .pointOfView({ lat: 35, lng: 15, altitude: 2.3 });
 
   globe.globeMaterial().color.set('#0d2f52');
@@ -71,7 +78,7 @@
   });
 
   function smallCountryLabels() {
-    return features.filter(function (f) { return f.haircuts; }).map(function (f) {
+    return features.filter(function (f) { return f.haircuts || f.visited; }).map(function (f) {
       var b = bounds(f.geometry);
       return { country: f.haircuts, name: f.properties.name, lat: (b[1] + b[3]) / 2, lng: (b[0] + b[2]) / 2,
                size: Math.max(b[2] - b[0], b[3] - b[1]) };
@@ -198,8 +205,6 @@
     if (visitedDone) return;
     visitedDone = true;
     var visited = window.VISITED;
-    var visitedMap = {};
-    visited.forEach(function (v) { visitedMap[v.map] = true; });
 
     document.getElementById('visited-title').textContent =
       'Map of all ' + visited.length + ' countries / territories visited';
@@ -225,8 +230,7 @@
     add('path', { d: path({ type: 'Sphere' }), class: 'ocean' });
     var dots = [];
     features.forEach(function (f) {
-      var name = f.properties.name;
-      var cls = f.haircuts ? 'haircut' : visitedMap[name] ? 'visited' : '';
+      var cls = f.haircuts ? 'haircut' : f.visited ? 'visited' : '';
       var el = add('path', { d: path(f), class: 'country ' + cls });
       if (f.haircuts) {
         el.style.cursor = 'pointer';

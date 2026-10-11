@@ -29,6 +29,7 @@ html, body {
 
 .globe-header h1 { font-size: 22px; margin: 0 0 4px; }
 .globe-header p { font-size: 14px; margin: 0; color: #c9d3e0; }
+.globe-header .legend { margin-top: 4px; font-size: 13px; }
 
 #tooltip {
   position: absolute;
