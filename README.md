@@ -4,7 +4,9 @@ An Android app showing Schnutz' international haircuts on a globe. Tap an
 orange country (or a labelled dot for very small ones) to see its haircut
 events, newest first, with photos, laid out like
 [schnutz-haircuts.github.io/Haircuts](https://schnutz-haircuts.github.io/Haircuts/).
-"All countries" lists every country alphabetically. Everything works offline:
+Three buttons below the globe open the countries visited (an Equal Earth
+world map and the list from `index_footer.html`), all haircuts by date (like
+`bydate.html`), and every country with a haircut alphabetically. Everything works offline:
 the photos are bundled in the app.
 
 ## Getting the app
@@ -25,7 +27,7 @@ https://schnutz-haircuts.github.io/Haircuts-app/ on every build.
 ## How it is built
 
 - `web/` is the app itself: a [globe.gl](https://github.com/vasturiano/globe.gl)
-  globe with Natural Earth country shapes (`data/world.js`, from
+  globe and a [d3-geo](https://github.com/d3/d3-geo) Equal Earth map, with Natural Earth country shapes (`data/world.js`, from
   [world-atlas](https://github.com/topojson/world-atlas)) and plain HTML pages.
 - `tools/build_data.py path/to/Haircuts` turns `hair-list.csv` into
   `web/data/events.js` and copies the photos into `web/photos/` (shrinking any

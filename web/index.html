@@ -15,7 +15,11 @@
     <p id="summary"></p>
   </header>
   <div id="tooltip" hidden></div>
-  <button id="list-button" type="button">All countries</button>
+  <nav class="globe-buttons">
+    <a href="#visited">Countries visited</a>
+    <a href="#bydate">Haircuts by date</a>
+    <a href="#list">All countries with haircut</a>
+  </nav>
 </section>
 
 <section id="list-view" hidden>
@@ -23,6 +27,27 @@
   <div class="page">
     <h1>Schnutz' international haircuts</h1>
     <ol id="country-list"></ol>
+  </div>
+</section>
+
+<section id="visited-view" hidden>
+  <nav class="topbar"><a href="#">&larr; Globe</a></nav>
+  <div class="page">
+    <h3 id="visited-title"></h3>
+    <div id="visited-map"></div>
+    <p class="legend"><span class="swatch haircut"></span> with haircut
+      <span class="swatch visited"></span> visited</p>
+    <p id="visited-list"></p>
+  </div>
+</section>
+
+<section id="bydate-view" hidden>
+  <nav class="topbar"><a href="#">&larr; Globe</a></nav>
+  <div class="page">
+    <h1>Schnutz' international haircuts by date</h1>
+    <h3>Table of Contents</h3>
+    <ol id="bydate-toc"></ol>
+    <div id="bydate-contents"></div>
   </div>
 </section>
 
@@ -35,6 +60,8 @@
 
 <script src="lib/globe.gl.min.js"></script>
 <script src="lib/topojson-client.min.js"></script>
+<script src="lib/d3-array.min.js"></script>
+<script src="lib/d3-geo.min.js"></script>
 <script src="data/world.js"></script>
 <script src="data/events.js"></script>
 <script src="app.js"></script>

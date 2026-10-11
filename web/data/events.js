@@ -1740,3 +1740,489 @@ window.HAIRCUTS = [
   ]
  }
 ];
+window.VISITED = [
+ {
+  "name": "Albania",
+  "map": "Albania"
+ },
+ {
+  "name": "Algeria",
+  "map": "Algeria"
+ },
+ {
+  "name": "Andorra",
+  "map": "Andorra"
+ },
+ {
+  "name": "Angola",
+  "map": "Angola"
+ },
+ {
+  "name": "Argentina",
+  "map": "Argentina"
+ },
+ {
+  "name": "Armenia",
+  "map": "Armenia"
+ },
+ {
+  "name": "Austria",
+  "map": "Austria"
+ },
+ {
+  "name": "Azerbaijan",
+  "map": "Azerbaijan"
+ },
+ {
+  "name": "Bahrain",
+  "map": "Bahrain"
+ },
+ {
+  "name": "Belarus",
+  "map": "Belarus"
+ },
+ {
+  "name": "Belgium",
+  "map": "Belgium"
+ },
+ {
+  "name": "Benin",
+  "map": "Benin"
+ },
+ {
+  "name": "Bolivia",
+  "map": "Bolivia"
+ },
+ {
+  "name": "Bosnia and Herzegovina",
+  "map": "Bosnia and Herz."
+ },
+ {
+  "name": "Botswana",
+  "map": "Botswana"
+ },
+ {
+  "name": "Brazil",
+  "map": "Brazil"
+ },
+ {
+  "name": "Brunei Darussalam",
+  "map": "Brunei"
+ },
+ {
+  "name": "Bulgaria",
+  "map": "Bulgaria"
+ },
+ {
+  "name": "Cameroon",
+  "map": "Cameroon"
+ },
+ {
+  "name": "Canada",
+  "map": "Canada"
+ },
+ {
+  "name": "Chile",
+  "map": "Chile"
+ },
+ {
+  "name": "China",
+  "map": "China"
+ },
+ {
+  "name": "Colombia",
+  "map": "Colombia"
+ },
+ {
+  "name": "Costa Rica",
+  "map": "Costa Rica"
+ },
+ {
+  "name": "Côte d'Ivoire",
+  "map": "Côte d'Ivoire"
+ },
+ {
+  "name": "Croatia",
+  "map": "Croatia"
+ },
+ {
+  "name": "Cuba",
+  "map": "Cuba"
+ },
+ {
+  "name": "Cyprus",
+  "map": "Cyprus"
+ },
+ {
+  "name": "Czech Republic",
+  "map": "Czechia"
+ },
+ {
+  "name": "Denmark",
+  "map": "Denmark"
+ },
+ {
+  "name": "Djibouti",
+  "map": "Djibouti"
+ },
+ {
+  "name": "Dominican Republic",
+  "map": "Dominican Rep."
+ },
+ {
+  "name": "Ecuador",
+  "map": "Ecuador"
+ },
+ {
+  "name": "Egypt",
+  "map": "Egypt"
+ },
+ {
+  "name": "Estonia",
+  "map": "Estonia"
+ },
+ {
+  "name": "Ethiopia",
+  "map": "Ethiopia"
+ },
+ {
+  "name": "Fiji",
+  "map": "Fiji"
+ },
+ {
+  "name": "Finland",
+  "map": "Finland"
+ },
+ {
+  "name": "France",
+  "map": "France"
+ },
+ {
+  "name": "Gabon",
+  "map": "Gabon"
+ },
+ {
+  "name": "Georgia",
+  "map": "Georgia"
+ },
+ {
+  "name": "Germany",
+  "map": "Germany"
+ },
+ {
+  "name": "Greece",
+  "map": "Greece"
+ },
+ {
+  "name": "Holy See (Vatican City State)",
+  "map": "Vatican"
+ },
+ {
+  "name": "Hungary",
+  "map": "Hungary"
+ },
+ {
+  "name": "Iceland",
+  "map": "Iceland"
+ },
+ {
+  "name": "India",
+  "map": "India"
+ },
+ {
+  "name": "Indonesia",
+  "map": "Indonesia"
+ },
+ {
+  "name": "Ireland",
+  "map": "Ireland"
+ },
+ {
+  "name": "Israel",
+  "map": "Israel"
+ },
+ {
+  "name": "Italy",
+  "map": "Italy"
+ },
+ {
+  "name": "Japan",
+  "map": "Japan"
+ },
+ {
+  "name": "Jordan",
+  "map": "Jordan"
+ },
+ {
+  "name": "Kazakhstan",
+  "map": "Kazakhstan"
+ },
+ {
+  "name": "Kenya",
+  "map": "Kenya"
+ },
+ {
+  "name": "Korea, Republic",
+  "map": "South Korea"
+ },
+ {
+  "name": "Kyrgyzstan",
+  "map": "Kyrgyzstan"
+ },
+ {
+  "name": "Latvia",
+  "map": "Latvia"
+ },
+ {
+  "name": "Lebanon",
+  "map": "Lebanon"
+ },
+ {
+  "name": "Lesotho",
+  "map": "Lesotho"
+ },
+ {
+  "name": "Libya",
+  "map": "Libya"
+ },
+ {
+  "name": "Liechtenstein",
+  "map": "Liechtenstein"
+ },
+ {
+  "name": "Lithuania",
+  "map": "Lithuania"
+ },
+ {
+  "name": "Luxembourg",
+  "map": "Luxembourg"
+ },
+ {
+  "name": "Madagascar",
+  "map": "Madagascar"
+ },
+ {
+  "name": "Malawi",
+  "map": "Malawi"
+ },
+ {
+  "name": "Malaysia",
+  "map": "Malaysia"
+ },
+ {
+  "name": "Malta",
+  "map": "Malta"
+ },
+ {
+  "name": "Mexico",
+  "map": "Mexico"
+ },
+ {
+  "name": "Moldova",
+  "map": "Moldova"
+ },
+ {
+  "name": "Monaco",
+  "map": "Monaco"
+ },
+ {
+  "name": "Mongolia",
+  "map": "Mongolia"
+ },
+ {
+  "name": "Montenegro",
+  "map": "Montenegro"
+ },
+ {
+  "name": "Morocco",
+  "map": "Morocco"
+ },
+ {
+  "name": "Mozambique",
+  "map": "Mozambique"
+ },
+ {
+  "name": "Namibia",
+  "map": "Namibia"
+ },
+ {
+  "name": "Netherlands",
+  "map": "Netherlands"
+ },
+ {
+  "name": "New Zealand",
+  "map": "New Zealand"
+ },
+ {
+  "name": "Nicaragua",
+  "map": "Nicaragua"
+ },
+ {
+  "name": "Niger",
+  "map": "Niger"
+ },
+ {
+  "name": "North Macedonia",
+  "map": "Macedonia"
+ },
+ {
+  "name": "Norway",
+  "map": "Norway"
+ },
+ {
+  "name": "Palestine",
+  "map": "Palestine"
+ },
+ {
+  "name": "Panama",
+  "map": "Panama"
+ },
+ {
+  "name": "Paraguay",
+  "map": "Paraguay"
+ },
+ {
+  "name": "Peru",
+  "map": "Peru"
+ },
+ {
+  "name": "Poland",
+  "map": "Poland"
+ },
+ {
+  "name": "Portugal",
+  "map": "Portugal"
+ },
+ {
+  "name": "Romania",
+  "map": "Romania"
+ },
+ {
+  "name": "Russia",
+  "map": "Russia"
+ },
+ {
+  "name": "San Marino",
+  "map": "San Marino"
+ },
+ {
+  "name": "Seychelles",
+  "map": "Seychelles"
+ },
+ {
+  "name": "Senegal",
+  "map": "Senegal"
+ },
+ {
+  "name": "Serbia",
+  "map": "Serbia"
+ },
+ {
+  "name": "Singapore",
+  "map": "Singapore"
+ },
+ {
+  "name": "Slovakia",
+  "map": "Slovakia"
+ },
+ {
+  "name": "Slovenia",
+  "map": "Slovenia"
+ },
+ {
+  "name": "South Africa",
+  "map": "South Africa"
+ },
+ {
+  "name": "Spain",
+  "map": "Spain"
+ },
+ {
+  "name": "Sri Lanka",
+  "map": "Sri Lanka"
+ },
+ {
+  "name": "Swaziland",
+  "map": "eSwatini"
+ },
+ {
+  "name": "Sweden",
+  "map": "Sweden"
+ },
+ {
+  "name": "Switzerland",
+  "map": "Switzerland"
+ },
+ {
+  "name": "Syria",
+  "map": "Syria"
+ },
+ {
+  "name": "Taiwan",
+  "map": "Taiwan"
+ },
+ {
+  "name": "Tajikistan",
+  "map": "Tajikistan"
+ },
+ {
+  "name": "Tanzania",
+  "map": "Tanzania"
+ },
+ {
+  "name": "Thailand",
+  "map": "Thailand"
+ },
+ {
+  "name": "Tunisia",
+  "map": "Tunisia"
+ },
+ {
+  "name": "Turkey",
+  "map": "Turkey"
+ },
+ {
+  "name": "Turkmenistan",
+  "map": "Turkmenistan"
+ },
+ {
+  "name": "Uganda",
+  "map": "Uganda"
+ },
+ {
+  "name": "Ukraine",
+  "map": "Ukraine"
+ },
+ {
+  "name": "United Arab Emirates",
+  "map": "United Arab Emirates"
+ },
+ {
+  "name": "United Kingdom",
+  "map": "United Kingdom"
+ },
+ {
+  "name": "United States",
+  "map": "United States of America"
+ },
+ {
+  "name": "Uruguay",
+  "map": "Uruguay"
+ },
+ {
+  "name": "Uzbekistan",
+  "map": "Uzbekistan"
+ },
+ {
+  "name": "Yemen",
+  "map": "Yemen"
+ },
+ {
+  "name": "Zambia",
+  "map": "Zambia"
+ },
+ {
+  "name": "Zimbabwe",
+  "map": "Zimbabwe"
+ }
+];

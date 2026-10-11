@@ -109,10 +109,6 @@
 
   // Pages
 
-  document.getElementById('list-button').addEventListener('click', function () {
-    location.hash = 'list';
-  });
-
   var list = document.getElementById('country-list');
   countries.forEach(function (c) {
     var li = document.createElement('li');
@@ -142,19 +138,113 @@
       var p = document.createElement('p');
       p.textContent = e.text;
       page.appendChild(p);
-      if (!e.photos.length) return;
-      var table = document.createElement('div');
-      table.className = 'rTable';
-      e.photos.forEach(function (src) {
-        var img = document.createElement('img');
-        img.src = 'photos/' + src;
-        img.alt = c.name;
-        img.loading = 'lazy';
-        img.addEventListener('click', function () { openViewer(img.src); });
-        table.appendChild(img);
-      });
-      page.appendChild(table);
+      if (e.photos.length) page.appendChild(photoTable(e.photos, c.name));
     });
+  }
+
+  function photoTable(photos, alt) {
+    var table = document.createElement('div');
+    table.className = 'rTable';
+    photos.forEach(function (src) {
+      var img = document.createElement('img');
+      img.src = 'photos/' + src;
+      img.alt = alt;
+      img.loading = 'lazy';
+      img.addEventListener('click', function () { openViewer(img.src); });
+      table.appendChild(img);
+    });
+    return table;
+  }
+
+  // Mirrors bydate.html: a numbered contents list of every haircut, oldest
+  // first, as "year country - event", followed by each event with its photos.
+  var bydateDone = false;
+  function renderByDate() {
+    if (bydateDone) return;
+    bydateDone = true;
+    var all = [];
+    countries.forEach(function (c) {
+      c.events.forEach(function (e) { all.push({ country: c, event: e }); });
+    });
+    all.sort(function (a, b) { return a.event.date < b.event.date ? -1 : a.event.date > b.event.date ? 1 : 0; });
+
+    var toc = document.getElementById('bydate-toc');
+    var contents = document.getElementById('bydate-contents');
+    all.forEach(function (x) {
+      var title = x.event.date.slice(0, 4) + ' ' + x.country.name + ' - ' + x.event.text;
+      var h = document.createElement('h3');
+      h.textContent = title;
+      contents.appendChild(h);
+      if (x.event.photos.length) contents.appendChild(photoTable(x.event.photos, x.country.name));
+
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#bydate';
+      a.textContent = title;
+      a.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        h.scrollIntoView();
+        window.scrollBy(0, -60);
+      });
+      li.appendChild(a);
+      toc.appendChild(li);
+    });
+  }
+
+  // Mirrors index_footer.html: an Equal Earth map of every country visited,
+  // then the list of their names.
+  var visitedDone = false;
+  function renderVisited() {
+    if (visitedDone) return;
+    visitedDone = true;
+    var visited = window.VISITED;
+    var visitedMap = {};
+    visited.forEach(function (v) { visitedMap[v.map] = true; });
+
+    document.getElementById('visited-title').textContent =
+      'Map of all ' + visited.length + ' countries / territories visited';
+    document.getElementById('visited-list').textContent =
+      visited.map(function (v) { return v.name; }).join(', ');
+
+    var W = 960, H = 470;
+    var projection = d3.geoEqualEarth().fitExtent([[4, 4], [W - 4, H - 4]], { type: 'Sphere' });
+    var path = d3.geoPath(projection);
+    var NS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', 'World map of the countries visited');
+
+    function add(tag, attrs) {
+      var el = document.createElementNS(NS, tag);
+      Object.keys(attrs).forEach(function (k) { el.setAttribute(k, attrs[k]); });
+      svg.appendChild(el);
+      return el;
+    }
+
+    add('path', { d: path({ type: 'Sphere' }), class: 'ocean' });
+    var dots = [];
+    features.forEach(function (f) {
+      var name = f.properties.name;
+      var cls = f.haircuts ? 'haircut' : visitedMap[name] ? 'visited' : '';
+      var el = add('path', { d: path(f), class: 'country ' + cls });
+      if (f.haircuts) {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function () { openCountry(f.haircuts); });
+      }
+      // Countries too small to see get a dot.
+      if (cls && path.area(f) < 8) dots.push({ f: f, cls: cls });
+    });
+    dots.forEach(function (d) {
+      var c = path.centroid(d.f);
+      var el = add('circle', { cx: c[0], cy: c[1], r: 2.6, class: d.cls });
+      if (d.f.haircuts) {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function () { openCountry(d.f.haircuts); });
+      }
+    });
+
+    document.getElementById('visited-map').appendChild(svg);
   }
 
   var viewer = document.getElementById('viewer');
@@ -167,6 +257,8 @@
   var views = {
     globe: document.getElementById('globe-view'),
     list: document.getElementById('list-view'),
+    visited: document.getElementById('visited-view'),
+    bydate: document.getElementById('bydate-view'),
     country: document.getElementById('country-view')
   };
 
@@ -186,6 +278,12 @@
     var hash = decodeURIComponent(location.hash.slice(1));
     if (hash === 'list') {
       show('list');
+    } else if (hash === 'visited') {
+      renderVisited();
+      show('visited');
+    } else if (hash === 'bydate') {
+      renderByDate();
+      show('bydate');
     } else if (bySlug[hash]) {
       renderCountry(bySlug[hash]);
       show('country');
