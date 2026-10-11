@@ -1838,10 +1838,6 @@ window.VISITED = [
   "map": "Costa Rica"
  },
  {
-  "name": "Côte d'Ivoire",
-  "map": "Côte d'Ivoire"
- },
- {
   "name": "Croatia",
   "map": "Croatia"
  },
@@ -1856,6 +1852,10 @@ window.VISITED = [
  {
   "name": "Czech Republic",
   "map": "Czechia"
+ },
+ {
+  "name": "Côte d'Ivoire",
+  "map": "Côte d'Ivoire"
  },
  {
   "name": "Denmark",
@@ -1964,6 +1964,10 @@ window.VISITED = [
  {
   "name": "Korea, Republic",
   "map": "South Korea"
+ },
+ {
+  "name": "Kosovo",
+  "map": "Kosovo"
  },
  {
   "name": "Kyrgyzstan",
@@ -2106,16 +2110,16 @@ window.VISITED = [
   "map": "San Marino"
  },
  {
-  "name": "Seychelles",
-  "map": "Seychelles"
- },
- {
   "name": "Senegal",
   "map": "Senegal"
  },
  {
   "name": "Serbia",
   "map": "Serbia"
+ },
+ {
+  "name": "Seychelles",
+  "map": "Seychelles"
  },
  {
   "name": "Singapore",

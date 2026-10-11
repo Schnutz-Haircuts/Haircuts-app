@@ -71,7 +71,12 @@ def main(src: Path, out: Path) -> None:
         c["events"].sort(key=lambda e: e["date"], reverse=True)
     data = sorted(countries.values(), key=lambda c: c["name"])
 
+    # Every country with a haircut was visited, even if the footer list misses it.
     visited = read_visited(src / "index_footer.html")
+    visited_maps = {v["map"] for v in visited}
+    visited += [{"name": c["name"], "map": c["map"]} for c in data
+                if c["map"] not in visited_maps]
+    visited.sort(key=lambda v: v["name"])
 
     (out / "data").mkdir(parents=True, exist_ok=True)
     with open(out / "data" / "events.js", "w", encoding="utf-8") as f:
