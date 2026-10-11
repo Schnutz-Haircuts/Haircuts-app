@@ -145,7 +145,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "AUT2b.jpg"
  },
  {
   "name": "Azerbaijan",
@@ -193,7 +193,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "BLR.jpg"
  },
  {
   "name": "Belgium",
@@ -343,7 +343,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "BUL2b.jpg"
  },
  {
   "name": "Cameroon",
@@ -420,7 +420,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "CRO2b.jpg"
  },
  {
   "name": "Cyprus",
@@ -674,7 +674,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "GER3b.jpg"
  },
  {
   "name": "Greece",
@@ -769,7 +769,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "INA2b.jpg"
  },
  {
   "name": "Italy",
@@ -858,7 +858,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "JOR2b.jpg"
  },
  {
   "name": "Kazakhstan",
@@ -972,7 +972,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "LAT3c.jpg"
  },
  {
   "name": "Lebanon",
@@ -1034,7 +1034,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "LTU2b.jpg"
  },
  {
   "name": "Madagascar",
@@ -1381,7 +1381,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "POL.jpg"
  },
  {
   "name": "Portugal",
@@ -1530,7 +1530,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "RSA3b.jpg"
  },
  {
   "name": "Spain",
@@ -1550,7 +1550,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "ESP2b.jpg"
  },
  {
   "name": "Switzerland",
@@ -1744,7 +1744,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "UKR2b.jpg"
  },
  {
   "name": "United Arab Emirates",
@@ -1791,7 +1791,7 @@ window.HAIRCUTS = [
     "photos": []
    }
   ],
-  "thumb": null
+  "thumb": "USA2b.jpg"
  },
  {
   "name": "Uzbekistan",
