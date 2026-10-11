@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -29,6 +31,11 @@ jobs:
         run: |
           pip install pillow
           python tools/build_data.py haircuts-src
+
+      - name: Package the website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
 
       - uses: actions/setup-java@v4
         with:
@@ -58,3 +65,16 @@ jobs:
           body: Download Haircuts.apk on your Android phone and open it to install.
           files: Haircuts.apk
           make_latest: true
+
+  # The same app as a website: https://schnutz-haircuts.github.io/Haircuts-app/
+  # Needs Settings > Pages > Source set to "GitHub Actions" once.
+  website:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

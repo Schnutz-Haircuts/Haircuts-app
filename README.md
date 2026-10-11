@@ -17,6 +17,11 @@ The data comes from `hair-list.csv` and the photos in
 [Schnutz-Haircuts/Haircuts](https://github.com/Schnutz-Haircuts/Haircuts). After
 changing them there, rebuild here: Actions → Build APK → Run workflow.
 
+## In a browser
+
+The same app is published as a website at
+https://schnutz-haircuts.github.io/Haircuts-app/ on every build.
+
 ## How it is built
 
 - `web/` is the app itself: a [globe.gl](https://github.com/vasturiano/globe.gl)
