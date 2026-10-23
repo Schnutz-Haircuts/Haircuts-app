@@ -28,7 +28,8 @@ https://schnutz-haircuts.github.io/Haircuts-app/ on every build.
 
 - `web/` is the app itself: a [globe.gl](https://github.com/vasturiano/globe.gl)
   globe and a [d3-geo](https://github.com/d3/d3-geo) Equal Earth map, with Natural Earth country shapes (`data/world.js`, from
-  [world-atlas](https://github.com/topojson/world-atlas)) and plain HTML pages.
+  [world-atlas](https://github.com/topojson/world-atlas), with Crimea
+  shown as part of Ukraine by `tools/make_world.js`) and plain HTML pages.
 - `tools/build_data.py path/to/Haircuts` turns `hair-list.csv` into
   `web/data/events.js` and copies the photos into `web/photos/` (shrinking any
   larger than 1600 px). Country names that differ from the map's are listed in

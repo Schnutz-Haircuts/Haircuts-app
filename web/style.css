@@ -84,51 +84,114 @@ html, body {
   text-decoration: none;
 }
 
-/* Pages: same look as schnutz-haircuts.github.io/Haircuts */
+/* Pages */
 
 .topbar {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
+  gap: 12px;
   padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
-  background: #fff;
-  border-bottom: 1px solid #ccc;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 17px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
   z-index: 1;
 }
 
-.page {
-  padding: 0 16px 32px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
+.topbar a {
+  color: #8a4f00;
+  text-decoration: none;
+  padding: 4px 12px;
+  border: 1px solid #e3c99a;
+  border-radius: 16px;
 }
 
-.page h1 { font-size: 24px; }
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #222;
+}
+
+body { background: #f7f3ec; }
+
+.page h1 { font-size: 24px; line-height: 1.25; }
 .page h3 { font-size: 19px; margin: 18px 0 8px; }
+.page a { color: #8a4f00; }
+
+.page-title {
+  margin: 22px 0 2px;
+  font-size: 28px;
+  border-left: 5px solid #e08a0b;
+  padding-left: 12px;
+}
+
+.page-subtitle {
+  margin: 0 0 14px 17px;
+  color: #777;
+  font-size: 15px;
+}
 
 #country-list { padding-left: 24px; line-height: 1.9; }
 #country-list span { color: #666; }
 
-.rTable {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px;
-  padding: 2px;
-  width: fit-content;
-  max-width: 100%;
-  box-sizing: border-box;
-  background-color: #eee;
-  border: 1px solid #666;
-  margin-bottom: 16px;
+/* A haircut event */
+
+.event {
+  margin: 14px 0;
+  padding: 14px 16px 16px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.rTable img {
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-bottom: 6px;
+}
+
+.event-date {
+  color: #a35f00;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.event-country { font-size: 17px; font-weight: bold; text-decoration: none; }
+
+.event-text { margin: 0; }
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.photos img {
   display: block;
-  height: 240px;
+  flex: 1 1 140px;
+  height: 230px;
+  min-width: 0;
   max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 6px;
+  background: #eee;
+  cursor: zoom-in;
+}
+
+@media (min-width: 700px) {
+  .photos img { height: 300px; flex-basis: 200px; }
 }
 
 /* Countries visited */

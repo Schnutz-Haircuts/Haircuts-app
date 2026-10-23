@@ -191,20 +191,48 @@
   function renderCountry(c) {
     var page = document.getElementById('country-page');
     page.textContent = '';
-    var h = document.createElement('h3');
-    h.textContent = c.name;
+    var h = el('h2', 'page-title', c.name);
     page.appendChild(h);
+    page.appendChild(el('p', 'page-subtitle',
+      c.events.length + (c.events.length === 1 ? ' haircut' : ' haircuts')));
     c.events.forEach(function (e) {
-      var p = document.createElement('p');
-      p.textContent = e.text;
-      page.appendChild(p);
-      if (e.photos.length) page.appendChild(photoTable(e.photos, c.name));
+      page.appendChild(eventCard(c, e, false));
     });
   }
 
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text) node.textContent = text;
+    return node;
+  }
+
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+                'August', 'September', 'October', 'November', 'December'];
+  function formatDate(iso) {
+    var p = iso.split('-');
+    return parseInt(p[2], 10) + ' ' + MONTHS[parseInt(p[1], 10) - 1] + ' ' + p[0];
+  }
+
+  // One haircut: its date (and country, on the by-date page), the event
+  // description and its photos.
+  function eventCard(c, e, withCountry) {
+    var card = el('article', 'event');
+    var meta = el('div', 'event-meta');
+    meta.appendChild(el('span', 'event-date', formatDate(e.date)));
+    if (withCountry) {
+      var a = el('a', 'event-country', c.name);
+      a.href = '#' + c.slug;
+      meta.appendChild(a);
+    }
+    card.appendChild(meta);
+    card.appendChild(el('p', 'event-text', e.text));
+    if (e.photos.length) card.appendChild(photoTable(e.photos, c.name));
+    return card;
+  }
+
   function photoTable(photos, alt) {
-    var table = document.createElement('div');
-    table.className = 'rTable';
+    var table = el('div', 'photos');
     photos.forEach(function (src) {
       var img = document.createElement('img');
       img.src = 'photos/' + src;
@@ -232,10 +260,8 @@
     var contents = document.getElementById('bydate-contents');
     all.forEach(function (x) {
       var title = x.event.date.slice(0, 4) + ' ' + x.country.name + ' - ' + x.event.text;
-      var h = document.createElement('h3');
-      h.textContent = title;
+      var h = eventCard(x.country, x.event, true);
       contents.appendChild(h);
-      if (x.event.photos.length) contents.appendChild(photoTable(x.event.photos, x.country.name));
 
       var li = document.createElement('li');
       var a = document.createElement('a');
@@ -244,7 +270,7 @@
       a.addEventListener('click', function (ev) {
         ev.preventDefault();
         h.scrollIntoView();
-        window.scrollBy(0, -60);
+        window.scrollBy(0, -70);
       });
       li.appendChild(a);
       toc.appendChild(li);
